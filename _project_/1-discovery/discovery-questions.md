@@ -1,8 +1,8 @@
-# Suggested Intake/Discovery Meeting Questions
+# Discovery meeting questions
 
-A question bank to guide the intake/discovery meeting. Sections are organized to match the structure of the discovery brief produced by `/discovery-brief`, so working top-to-bottom puts each answer in the right bucket.
+A question bank for the discovery meetings (Step 0b). The intake meeting upstream was problem-space only; these go deeper, toward what `/prd-creator` needs: users, pages, measures, data and rollout.
 
-Treat this as a **reference**, not a script — adapt, reorder, and skip based on what the client has already shared. The goal is to leave the meeting with enough material that `/discovery-brief` can produce a brief that survives `/product-plan` without a second call.
+Treat this as a **reference**, not a script. Adapt, reorder and skip based on what `_project_/0-intake/handoff.md` already settled. Ask for sample data *before* the meeting and walk through it during, and ask for the client's brand material (colours, fonts, logo files) now rather than after the PRD.
 
 ## Introductions & Roles
 
@@ -65,7 +65,7 @@ Walk through how the product will actually be used.
 
 ## Data Sources
 
-Map the data landscape. Cross-reference answers with `/docs/data/*.csv` schemas.
+Map the data landscape. Cross-reference answers with the samples in `_project_/1-discovery/data/`.
 
 - Which systems or sources hold the data we need — databases, warehouses, SaaS APIs, flat files?
 - For each source: who owns it, how often is it refreshed, and what's the freshness requirement for this product?

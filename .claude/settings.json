@@ -1,5 +1,6 @@
 {
   "enabledPlugins": {
+    "custom-visuals@power-bi-agentic-development": true,
     "fabric-cli@power-bi-agentic-development": true,
     "pbi-desktop@power-bi-agentic-development": true,
     "pbip@power-bi-agentic-development": true,

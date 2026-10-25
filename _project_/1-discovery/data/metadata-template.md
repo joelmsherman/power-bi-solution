@@ -8,7 +8,7 @@ To be filled out for each source dataframe:
     - [Column1]: [Describe the column]
     - ...
     - [ColumnN]: [Describe the column]
-- Sample data: `/docs/data/[sourcename].csv` 
+- Sample data: `_project_/1-discovery/data/[sourcename].csv` 
 - Source type: [Lake/Warehouse table, Excel, CSV, etc.]
 - Source location: [filepath, URL, database/SQL endpoint, etc.]
 
@@ -20,6 +20,6 @@ To be filled out for each source dataframe:
     - [Column1]: [Describe the column]
     - ...
     - [ColumnN]: [Describe the column]
-- Sample data: `/docs/data/[sourcename].csv` 
+- Sample data: `_project_/1-discovery/data/[sourcename].csv` 
 - Source type: [Lake/Warehouse table, Excel, CSV, etc.]
 - Source location: [filepath, URL, database/SQL endpoint, etc.]

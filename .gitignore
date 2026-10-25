@@ -1,12 +1,14 @@
-# Power BI cache
-.pbi/cache.abf
-.pbi/localSettings.json
+# Power BI local state (never commit)
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
 
 # Binary PBIX files (use PBIP format instead)
 *.pbix
 
-# BPA downloaded tools
+# Local tool downloads and scratch output
 _tools/
+.claude/scratchpads/
+.claude/settings.local.json
 
 # OS files
 .DS_Store

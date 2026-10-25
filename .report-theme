@@ -1,0 +1,68 @@
+# Report theme marker.
+#
+# Records which brand is currently stamped into the report's two themes, so an
+# agent can tell the client's real colours from the template's placeholders
+# without squinting at hex codes.
+#
+# `/report-theme` writes this file. Do not hand-edit it: the role map below is
+# what the next stamp searches for, so a value here that disagrees with the
+# theme files makes the next stamp miss. Change a colour by re-running the skill.
+
+status = default (unbranded)
+
+# --------------------------------------------------------------------------
+# The picks. Filled in by /report-theme at step 2 of the workflow, from the
+# brand inputs /prd-creator collected in _project_/2-prd/brand-inputs.md.
+# --------------------------------------------------------------------------
+client        =
+brand         = #00adff    # placeholder: PowerUI "Metro" cyan
+secondary     = #20c5ff    # placeholder
+heading_font  = Segoe UI   # placeholder
+body_font     = Segoe UI   # placeholder
+logo_files    =            # filenames in RegisteredResources/, or "none supplied"
+stamped_on    =
+
+# --------------------------------------------------------------------------
+# Role map: the literal values PowerUI baked into each file, by role. These
+# are what stamp-theme.py replaces, so after every stamp they are rewritten to
+# the NEW values. Neutrals (foreground, background, borders) are not brand
+# roles and are not stamped.
+# --------------------------------------------------------------------------
+# role             Light.json   Dark.json
+light.accent       = #00adff    # 18 uses: primary accent, selection, maximum
+light.accent_deep  = #006eb4    # 13 uses: accent text and links on light
+light.accent_alt   = #20c5ff    # 4 uses
+light.accent_wash  = #b2e9ff    # 3 uses: selected-state tint
+dark.accent        = #00adff    # 18 uses
+dark.accent_alt    = #20c5ff    # 13 uses: accent text and links on dark
+dark.accent_deep   = #003c65    # 8 uses: selected-state fill on dark
+dark.accent_mid    = #005d95    # 4 uses
+data_colors        = #40C4E0 #B2D235 #FFCB43 #F79E88 #A5B5DD
+good               = #22c55e
+bad                = #ef4444
+neutral            = #f59e0b
+font_regular       = Segoe UI
+font_semibold      = Segoe UI Semibold
+
+# --------------------------------------------------------------------------
+# What the skill owns. Everything above is rewritten on a re-run.
+# --------------------------------------------------------------------------
+# src/<Project>.Report/StaticResources/RegisteredResources/Light.json
+# src/<Project>.Report/StaticResources/RegisteredResources/Dark.json
+#                         the role-map literals above, dataColors, name,
+#                         and the fontFace/fontFamily values. Nothing else.
+# src/<Project>.Report/StaticResources/RegisteredResources/<logo files>
+# _project_/2-prd/design-brief.md
+#                         report-theme:brand-section:start .. :end
+#
+# Not touched, ever: the neutrals and the visualStyles structure. They are
+# PowerUI's work and identical from client to client.
+
+# --------------------------------------------------------------------------
+# Contrast. /report-theme checks these pairs against WCAG 2.1 AA and records
+# the result here so a failure is traceable to a value rather than a vibe.
+# --------------------------------------------------------------------------
+# foreground on background                light:        dark:
+# foregroundNeutralSecondary on background light:        dark:
+# accent text on background               light:        dark:
+# each dataColor on background (3:1)      light:        dark:
